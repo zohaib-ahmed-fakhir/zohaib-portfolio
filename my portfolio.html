@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zohaib Ahmed – Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+        }
+
+        header {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #000, #111);
+        }
+
+        h1 {
+            font-size: 50px;
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-weight: 400;
+            color: #999;
+        }
+
+        .section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .skills-list {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            padding: 14px 22px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            border: 1px solid #333;
+            font-size: 16px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #000;
+            color: #777;
+            margin-top: 40px;
+        }
+
+        /* Neon + Floating */
+        :root {
+            --neon-color: #00eaff;
+            --neon-color-2: #ff00ff;
+        }
+
+        .neon-box {
+            border: 2px solid var(--neon-color);
+            box-shadow: 0 0 15px var(--neon-color), inset 0 0 15px var(--neon-color);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0); }
+        }
+
+        .float {
+            animation: floatUp 3s ease-in-out infinite;
+        }
+
+        /* Smooth fade */
+        .fade-in {
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        html { scroll-behavior: smooth; }
+
+        /* Hire button */
+        .hire-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            font-size: 16px;
+            border-radius: 30px;
+            background: #e0e0e0;
+            color: #000;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .hire-btn:hover { background: #fff; }
+
+        /* Social icons */
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #e0e0e0;
+            font-size: 22px;
+            text-decoration: none;
+        }
+
+        /* FINAL WORKING LOADER */
+        #loading-screen {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            color: #0ff;
+            font-size: 26px;
+            z-index: 9999;
+        }
+
+        .spinner {
+            width: 55px;
+            height: 55px;
+            border: 5px solid rgba(0, 255, 255, 0.3);
+            border-top: 5px solid #0ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- SINGLE FINAL LOADER -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        Loading...
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('loading-screen').style.display = 'none';
+        });
+    </script>
+
+    <!-- HEADER -->
+    <header class="glass">
+
+        <h1>ZOHAIB AHMED</h1>
+        <h2>Graphic Designer | Photo Editor | AI Enthusiast</h2>
+
+        <a href="#contact" class="hire-btn">Hire Me</a>
+
+        <div class="social-icons">
+            <a href="https://instagram.com/zohaibahmedfakhir">Instagram</a>
+            <a href="mailto:zohaibahmedfakhir@gmail.com">Email</a>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="section neon-box float fade-in">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate creative professional skilled in graphic design,
+            photo editing, and modern AI tools. I focus on producing visually 
+            appealing designs and enhancing workflows using AI.
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section neon-box float fade-in">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill">Graphic Design</div>
+            <div class="skill">Photo Editing</div>
+            <div class="skill">AI Tools</div>
+            <div class="skill">Creative Direction</div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section neon-box float fade-in">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Creative Poster Designs</h3>
+                <p>High-quality posters designed using modern design principles.</p>
+            </div>
+            <div class="project-card">
+                <h3>Photo Retouching Portfolio</h3>
+                <p>Advanced retouching & color grading for professional results.</p>
+            </div>
+            <div class="project-card">
+                <h3>AI-Based Design Concepts</h3>
+                <p>Unique AI-generated concepts improving creative workflow.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section neon-box float fade-in">
+        <h2>Contact Me</h2>
+        <p>Email: zohaibahmedfakhir@gmail.com</p>
+        <p>Phone: +92 335 7368739</p>
+        <p>Instagram: zohaibahmedfakhir</p>
+    </section>
+
+    <footer>
+        © 2025 Zohaib Ahmed – Portfolio Website
+    </footer>
+
+</body>
+</html>

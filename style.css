@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Neon Lines Background */
+.neon-lines {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(90deg, rgba(0,255,255,0.1) 0, rgba(0,255,255,0.1) 2px, transparent 2px, transparent 80px);
+  animation: move 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes move {
+  0% { background-position: 0 0; }
+  100% { background-position: 2000px 0; }
+}
+
+/* Glow */
+.glow {
+  text-shadow: 0 0 15px #0ff;
+}
+
+/* Home */
+.header {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.title {
+  font-size: 60px;
+}
+
+.menu a {
+  color: #0ff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #fff;
+  text-shadow: 0 0 20px #0ff;
+}
+
+/* Pages */
+.page-title {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 50px;
+}
+
+.box {
+  width: 60%;
+  margin: 40px auto;
+  padding: 30px;
+  border: 2px solid #0ff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #0ff;
+}
+
+.profile-img {
+  width: 140px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  box-shadow: 0 0 20px #0ff;
+}
+
+.back-btn {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  color: #0ff;
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  text-shadow: 0 0 20px #0ff;
+}
+
+/* Fade */
+.fade-in {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fade 1.3s forwards;
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Parallax */
+.parallax {
+  transition: transform 0.1s linear;
+}
